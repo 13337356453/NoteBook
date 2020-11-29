@@ -1,0 +1,25 @@
+#edit_pane{
+    -fx-background-insets: 0;
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+#edit_pane .content {
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+#edit_pane:focused {
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+#edit_box{
+    -fx-background-insets: 0;
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+#edit_box .content {
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+#edit_box:focused {
+    -fx-background-color: transparent, white, transparent, white;
+}

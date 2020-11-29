@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="MainFrame" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+    <children>
+        <MenuBar fx:id="menus" prefHeight="25.0" prefWidth="${MainFrame.width}" style="-fx-background-color: #fff;">
+            <menus>
+                <Menu fx:id="menu_file" mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem fx:id="newfile_item" mnemonicParsing="false" onAction="#create_new_file" text="New" />
+                        <MenuItem fx:id="openfile_item" mnemonicParsing="false" onAction="#open_a_file" text="Open" />
+                        <MenuItem fx:id="savefile_item" mnemonicParsing="false" onAction="#save_a_file" text="Save" />
+                        <MenuItem fx:id="exit_item" mnemonicParsing="false" onAction="#exit_program" text="Exit" />
+                    </items>
+                </Menu>
+                <Menu fx:id="menu_edit" mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem fx:id="selectall_item" mnemonicParsing="false" onAction="#select_all" text="Select All" />
+                        <MenuItem fx:id="copy_item" mnemonicParsing="false" onAction="#copy" text="Copy" />
+                        <MenuItem fx:id="paste_item" mnemonicParsing="false" onAction="#paste" text="Paste" />
+                        <MenuItem fx:id="cut_item" mnemonicParsing="false" onAction="#cut" text="Cut" />
+                        <MenuItem fx:id="clear_item" mnemonicParsing="false" onAction="#clear" text="Clear" />
+                    </items>
+                </Menu>
+                <Menu fx:id="menu_help" mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem fx:id="about__item" mnemonicParsing="false" onAction="#show_about" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+      <TextArea id="edit_box" fx:id="edit_box" layoutY="25.0" prefHeight="${MainFrame.height-60}" prefWidth="${MainFrame.width}" stylesheets="@../../style/edit.css">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextArea>
+        <HBox fx:id="under_box" layoutY="445.0" prefHeight="35.0" prefWidth="${MainFrame.width}" spacing="80.0" style="-fx-background-color: #f5f6f7;" stylesheets="@../../style/under.css">
+            <children>
+                <TextField id="time_show_box" fx:id="time_shower" disable="true" opacity="0.8" prefHeight="35.0" prefWidth="160.0">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="file_name_shower" disable="true" opacity="0.8" prefHeight="35.0" prefWidth="160.0">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </TextField>
+            <ComboBox fx:id="size_chooser" opacity="0.8" prefHeight="35.0" prefWidth="160.0" promptText="Font Size" />
+            </children></HBox>
+    </children>
+</VBox>
